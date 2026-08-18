@@ -110,7 +110,7 @@ export default function EditAppModal({
               <Edit3 size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#fff' }}>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-main)' }}>
                 앱 정보 수정
               </h2>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>

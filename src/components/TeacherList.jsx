@@ -104,7 +104,7 @@ export default function TeacherList({
             alignItems: 'center',
             gap: '2px',
             flexWrap: 'nowrap',
-            background: 'rgba(0, 0, 0, 0.25)',
+            background: 'var(--input-bg)',
             padding: '3px',
             borderRadius: 'var(--radius-full)',
             border: '1px solid var(--border-color)'
@@ -130,7 +130,7 @@ export default function TeacherList({
                     background: isSelected 
                       ? (dept.id === '1팀' ? '#ff6b4a' : dept.id === '2팀' ? '#3b82f6' : dept.id === '3팀' ? '#10b981' : dept.id === '취업팀' ? '#a855f7' : '#ff6b4a')
                       : 'transparent',
-                    borderColor: isSelected ? 'transparent' : 'transparent',
+                    borderColor: 'transparent',
                     color: isSelected ? '#ffffff' : 'var(--text-muted)'
                   }}
                 >
@@ -140,7 +140,7 @@ export default function TeacherList({
             })}
 
             {/* Subtle Vertical Divider */}
-            <div style={{ width: '1px', height: '16px', background: 'rgba(255, 255, 255, 0.15)', margin: '0 2px' }} />
+            <div style={{ width: '1px', height: '16px', background: 'var(--border-color)', margin: '0 2px' }} />
 
             {/* Toggle Fold/Unfold Button */}
             <button
@@ -158,9 +158,10 @@ export default function TeacherList({
                 alignItems: 'center',
                 gap: '5px',
                 whiteSpace: 'nowrap',
-                background: isCollapsed ? 'rgba(255, 107, 74, 0.25)' : 'rgba(255, 255, 255, 0.08)',
-                borderColor: isCollapsed ? 'rgba(255, 107, 74, 0.4)' : 'transparent',
-                color: isCollapsed ? '#ff8b73' : '#cbd5e1'
+                background: isCollapsed ? '#ff6b4a' : 'var(--collapse-btn-bg)',
+                borderColor: isCollapsed ? '#ff6b4a' : 'var(--border-color)',
+                color: isCollapsed ? '#ffffff' : 'var(--text-main)',
+                boxShadow: isCollapsed ? '0 2px 8px rgba(255, 107, 74, 0.35)' : 'none'
               }}
             >
               {isCollapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
@@ -232,7 +233,7 @@ export default function TeacherList({
                     </div>
 
                     <div>
-                      <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#fff', letterSpacing: '-0.01em' }}>
+                      <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: 'var(--text-main)', letterSpacing: '-0.01em' }}>
                         {teacher.name}
                       </h3>
                     </div>

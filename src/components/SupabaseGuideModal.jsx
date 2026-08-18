@@ -38,7 +38,7 @@ export default function SupabaseGuideModal({ onClose }) {
               <Database size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#fff' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--text-main)' }}>
                 Supabase 테이블 생성 가이드
               </h2>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
@@ -63,21 +63,21 @@ export default function SupabaseGuideModal({ onClose }) {
           <div style={{ marginBottom: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
               <span className="badge badge-coral" style={{ minWidth: '24px', justifyContent: 'center' }}>1</span>
-              <div style={{ fontSize: '0.88rem', color: '#e2e8f0' }}>
+              <div style={{ fontSize: '0.88rem', color: 'var(--text-main)' }}>
                 <strong>Supabase 대시보드</strong> (<a href="https://supabase.com/dashboard" target="_blank" rel="noreferrer" style={{ color: '#60a5fa', textDecoration: 'underline' }}>supabase.com</a>) 접속 후 프로젝트를 선택합니다.
               </div>
             </div>
 
             <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
               <span className="badge badge-coral" style={{ minWidth: '24px', justifyContent: 'center' }}>2</span>
-              <div style={{ fontSize: '0.88rem', color: '#e2e8f0' }}>
+              <div style={{ fontSize: '0.88rem', color: 'var(--text-main)' }}>
                 왼쪽 메뉴에서 <strong>SQL Editor</strong> 를 클릭하고 <strong>[+ New query]</strong> 버튼을 누릅니다.
               </div>
             </div>
 
             <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
               <span className="badge badge-coral" style={{ minWidth: '24px', justifyContent: 'center' }}>3</span>
-              <div style={{ fontSize: '0.88rem', color: '#e2e8f0' }}>
+              <div style={{ fontSize: '0.88rem', color: 'var(--text-main)' }}>
                 아래의 <strong>SQL 스크립트를 복사하여 붙여넣고 [Run]</strong>을 클릭하면 모든 준비가 완료됩니다.
               </div>
             </div>

@@ -247,7 +247,7 @@ export default function AiAppBuilderModal({
             </div>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#fff', margin: 0 }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--text-main)', margin: 0 }}>
                   AI 프롬프트 앱 스튜디오
                 </h2>
                 <span className="badge badge-purple" style={{ fontSize: '0.75rem', padding: '2px 8px' }}>
@@ -793,7 +793,7 @@ export default function AiAppBuilderModal({
                     ✨
                   </div>
 
-                  <h3 style={{ fontSize: '1.25rem', color: '#fff', marginBottom: '8px' }}>
+                  <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '8px' }}>
                     AI가 복지관 스마트 앱을 제작하고 있습니다
                   </h3>
                   <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '24px' }}>
@@ -894,7 +894,7 @@ export default function AiAppBuilderModal({
                   color: 'var(--text-muted)'
                 }}>
                   <div style={{ fontSize: '3.5rem', marginBottom: '14px' }}>✨</div>
-                  <h3 style={{ fontSize: '1.25rem', color: '#fff', marginBottom: '8px' }}>
+                  <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '8px' }}>
                     나만의 아이디어를 멋진 앱으로 만들어보세요!
                   </h3>
                   <p style={{ fontSize: '0.88rem', lineHeight: '1.6', marginBottom: '24px' }}>

@@ -63,7 +63,7 @@ function DeleteConfirmDialog({ app, teacher, onConfirm, onCancel }) {
               <AlertTriangle size={24} color="#f87171" />
             </div>
             <div>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', marginBottom: '2px' }}>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--text-main)', marginBottom: '2px' }}>
                 이 앱을 삭제하시겠습니까?
               </h3>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
@@ -108,7 +108,7 @@ function DeleteConfirmDialog({ app, teacher, onConfirm, onCancel }) {
             <div style={{ minWidth: 0 }}>
               <p style={{
                 fontWeight: '700',
-                color: '#fff',
+                color: 'var(--text-main)',
                 fontSize: '0.95rem',
                 marginBottom: '3px',
                 overflow: 'hidden',
@@ -125,7 +125,7 @@ function DeleteConfirmDialog({ app, teacher, onConfirm, onCancel }) {
 
           <p style={{
             fontSize: '0.9rem',
-            color: '#cbd5e1',
+            color: 'var(--text-muted)',
             lineHeight: '1.6',
             marginBottom: '20px'
           }}>
@@ -240,7 +240,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
         position: 'relative',
         borderRadius: 'var(--radius-lg)',
         border: '1px solid var(--border-color)',
-        background: 'rgba(18, 25, 40, 0.85)'
+        background: 'var(--bg-card)'
       }}
     >
       {/* Thumbnail Banner / Preview Area */}
@@ -330,7 +330,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           style={{
             fontSize: '1.15rem',
             fontWeight: '700',
-            color: '#ffffff',
+            color: 'var(--text-main)',
             marginBottom: '8px',
             cursor: 'pointer',
             lineHeight: '1.4'
@@ -367,7 +367,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
             }}>
               {teacher.icon_emoji || '👩‍🏫'}
             </div>
-            <span style={{ fontSize: '0.85rem', fontWeight: '600', color: '#ff9e87' }}>
+            <span style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--primary)' }}>
               {teacher.name}
             </span>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-subtle)' }}>
@@ -379,7 +379,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
         {/* Description */}
         <p style={{
           fontSize: '0.86rem',
-          color: '#94a3b8',
+          color: 'var(--text-muted)',
           lineHeight: '1.5',
           marginBottom: '18px',
           display: '-webkit-box',
@@ -397,7 +397,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           flexDirection: 'column',
           gap: '10px',
           paddingTop: '12px',
-          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+          borderTop: '1px solid var(--border-color)',
           marginTop: 'auto'
         }}>
           {/* Row 1: Views & Date */}

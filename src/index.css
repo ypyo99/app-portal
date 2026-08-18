@@ -4,13 +4,21 @@
   --font-main: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
   --font-heading: 'Outfit', 'Noto Sans KR', sans-serif;
 
-  /* Color Palette - Vibrant Warm & Tech Blend */
+  /* Color Palette - Dark Mode Default */
   --bg-main: #0b0f19;
   --bg-secondary: #111827;
   --bg-card: rgba(23, 32, 51, 0.7);
   --bg-card-hover: rgba(30, 41, 67, 0.85);
   --bg-glass: rgba(17, 24, 39, 0.75);
   --bg-glass-card: rgba(255, 255, 255, 0.04);
+  --collapse-btn-bg: rgba(255, 255, 255, 0.08);
+  --header-bg: rgba(11, 15, 25, 0.85);
+  --modal-bg: #121927;
+  --modal-overlay-bg: rgba(4, 7, 14, 0.78);
+  --input-bg: rgba(17, 24, 39, 0.8);
+  --hero-bg: linear-gradient(135deg, rgba(23, 32, 51, 0.95) 0%, rgba(17, 24, 39, 0.9) 100%);
+  --hero-title-gradient: linear-gradient(90deg, #ffffff 30%, #fca5a5 70%, #c7d2fe 100%);
+  --brand-title-gradient: linear-gradient(90deg, #ffffff, #fca5a5);
   
   --border-color: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 107, 74, 0.35);
@@ -43,6 +51,37 @@
   --shadow-glow: 0 0 35px var(--primary-glow);
 }
 
+/* Light Theme Variables */
+[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(241, 245, 249, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-glass-card: rgba(0, 0, 0, 0.04);
+  --collapse-btn-bg: #e2e8f0;
+  --header-bg: rgba(255, 255, 255, 0.88);
+  --modal-bg: #ffffff;
+  --modal-overlay-bg: rgba(15, 23, 42, 0.4);
+  --input-bg: rgba(241, 245, 249, 0.95);
+  --hero-bg: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  --hero-title-gradient: linear-gradient(90deg, #0f172a 30%, #e11d48 70%, #4338ca 100%);
+  --brand-title-gradient: linear-gradient(90deg, #0f172a, #e11d48);
+
+  --border-color: rgba(0, 0, 0, 0.09);
+  --border-hover: rgba(255, 99, 71, 0.45);
+  --border-glow: rgba(99, 102, 241, 0.3);
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-subtle: #64748b;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 35px rgba(255, 99, 71, 0.2);
+}
+
 /* Global Reset & Base */
 * {
   box-sizing: border-box;
@@ -51,7 +90,7 @@
 }
 
 html {
-  font-size: clamp(14px, 0.35vw + 12px, 18px);
+  font-size: clamp(16px, 0.4vw + 14px, 20px);
 }
 
 html, body {
@@ -61,6 +100,7 @@ html, body {
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -190,14 +230,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--bg-glass-card);
   color: var(--text-main);
   border: 1px solid var(--border-color);
 }
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  background: var(--border-color);
+  color: var(--text-main);
   transform: translateY(-1px);
 }
 
@@ -270,6 +309,36 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
+[data-theme="light"] .badge-coral {
+  color: #e11d48;
+  background: rgba(225, 29, 72, 0.1);
+  border-color: rgba(225, 29, 72, 0.25);
+}
+
+[data-theme="light"] .badge-blue {
+  color: #4f46e5;
+  background: rgba(79, 70, 229, 0.1);
+  border-color: rgba(79, 70, 229, 0.25);
+}
+
+[data-theme="light"] .badge-green {
+  color: #059669;
+  background: rgba(5, 150, 105, 0.1);
+  border-color: rgba(5, 150, 105, 0.25);
+}
+
+[data-theme="light"] .badge-amber {
+  color: #d97706;
+  background: rgba(217, 119, 6, 0.1);
+  border-color: rgba(217, 119, 6, 0.25);
+}
+
+[data-theme="light"] .badge-purple {
+  color: #9333ea;
+  background: rgba(147, 51, 234, 0.1);
+  border-color: rgba(147, 51, 234, 0.25);
+}
+
 /* Form Controls */
 .form-group {
   display: flex;
@@ -281,13 +350,13 @@ h1, h2, h3, h4, h5, h6 {
 .form-label {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #e5e7eb;
+  color: var(--text-main);
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 12px 14px;
-  background: rgba(17, 24, 39, 0.8);
+  background: var(--input-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   color: var(--text-main);
@@ -300,7 +369,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(255, 107, 74, 0.2);
-  background: rgba(17, 24, 39, 0.95);
+  background: var(--bg-secondary);
 }
 
 .form-textarea {
@@ -315,7 +384,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(4, 7, 14, 0.78);
+  background: var(--modal-overlay-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 1000;
@@ -332,10 +401,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal-content {
-  background: #121927;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--modal-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 107, 74, 0.1);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(255, 107, 74, 0.1);
   width: 100%;
   max-width: 650px;
   max-height: 90vh;
@@ -605,8 +675,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .btn-sm {
-    padding: 5px 10px;
-    font-size: 0.78rem;
+    padding: 6px 12px;
+    font-size: 0.88rem;
   }
 
   main {
@@ -614,11 +684,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   h1 {
-    font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
+    font-size: clamp(1.65rem, 5vw, 2.2rem) !important;
   }
 
   h2 {
-    font-size: clamp(1.2rem, 4vw, 1.6rem) !important;
+    font-size: clamp(1.25rem, 4vw, 1.6rem) !important;
   }
 
   .glass-panel {
@@ -628,24 +698,24 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   html {
-    font-size: 13.5px;
+    font-size: 15px;
   }
 
   h1 {
-    font-size: 1.45rem !important;
+    font-size: 1.55rem !important;
   }
 
   h2 {
-    font-size: 1.15rem !important;
+    font-size: 1.25rem !important;
   }
 
   .badge {
-    font-size: 0.7rem !important;
-    padding: 2px 6px !important;
+    font-size: 0.78rem !important;
+    padding: 3px 8px !important;
   }
 
   .form-input, .form-select, .form-textarea {
-    font-size: 0.84rem !important;
-    padding: 8px 10px !important;
+    font-size: 0.94rem !important;
+    padding: 10px 12px !important;
   }
 }

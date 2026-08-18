@@ -171,7 +171,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
           }}
         >
           <Inbox size={48} style={{ color: 'var(--text-subtle)', marginBottom: '14px' }} />
-          <h3 style={{ fontSize: '1.2rem', marginBottom: '8px', color: '#e2e8f0' }}>
+          <h3 style={{ fontSize: '1.2rem', marginBottom: '8px', color: 'var(--text-main)' }}>
             선택한 조건에 맞는 앱이 없습니다
           </h3>
           <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '20px' }}>

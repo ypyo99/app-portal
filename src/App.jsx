@@ -26,6 +26,32 @@ export default function App() {
   const [isSupabaseConnected, setIsSupabaseConnected] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Theme State ('dark' | 'light')
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('app-share-theme') || 'dark';
+    } catch (e) {
+      return 'dark';
+    }
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('app-share-theme', theme);
+    } catch (e) {
+      // Storage quota exceeded; try clearing heavy local cache and retry silently
+      try {
+        localStorage.removeItem('seongdong_apps_data');
+        localStorage.setItem('app-share-theme', theme);
+      } catch (_) {}
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
+
   // Navigation & View State
   const [activeView, setActiveView] = useState('home'); // 'home', 'teacher_detail'
   const [selectedTeacher, setSelectedTeacher] = useState(null);
@@ -116,8 +142,10 @@ export default function App() {
 
   const handleResetData = () => {
     if (confirm('샘플 기본 데이터를 다시 로드하시겠습니까? (로컬에 저장된 임시 데이터가 초기화됩니다)')) {
-      localStorage.removeItem('seongdong_teachers_data');
-      localStorage.removeItem('seongdong_apps_data');
+      try {
+        localStorage.removeItem('seongdong_teachers_data');
+        localStorage.removeItem('seongdong_apps_data');
+      } catch (e) {}
       loadData();
     }
   };
@@ -170,6 +198,8 @@ export default function App() {
         activeView={activeView}
         setActiveView={setActiveView}
         selectedTeacher={selectedTeacher}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       {/* Main Container */}
@@ -185,9 +215,9 @@ export default function App() {
               marginBottom: '40px',
               position: 'relative',
               overflow: 'hidden',
-              background: 'linear-gradient(135deg, rgba(23, 32, 51, 0.95) 0%, rgba(17, 24, 39, 0.9) 100%)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
-              boxShadow: '0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(255, 107, 74, 0.12)'
+              background: 'var(--hero-bg)',
+              border: '1px solid var(--border-color)',
+              boxShadow: 'var(--shadow-lg)'
             }}
           >
             <div style={{ maxWidth: '820px' }}>
@@ -198,7 +228,7 @@ export default function App() {
                 fontWeight: '800',
                 lineHeight: '1.25',
                 marginBottom: '14px',
-                background: 'linear-gradient(90deg, #ffffff 30%, #fca5a5 70%, #c7d2fe 100%)',
+                background: 'var(--hero-title-gradient)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
               }}>
@@ -271,7 +301,7 @@ export default function App() {
       {/* Footer */}
       <footer style={{
         borderTop: '1px solid var(--border-color)',
-        background: 'rgba(11, 15, 25, 0.95)',
+        background: 'var(--header-bg)',
         padding: '24px',
         textAlign: 'center',
         fontSize: '0.85rem',

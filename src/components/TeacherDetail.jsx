@@ -48,7 +48,7 @@ export default function TeacherDetail({
           position: 'relative',
           overflow: 'hidden',
           borderTop: `4px solid ${teacherColor}`,
-          background: 'linear-gradient(135deg, rgba(23, 32, 51, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%)'
+          background: 'var(--hero-bg)'
         }}
       >
         <div style={{
@@ -92,7 +92,7 @@ export default function TeacherDetail({
 
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
-                <h1 style={{ fontSize: '1.8rem', fontWeight: '800', color: '#fff' }}>
+                <h1 style={{ fontSize: '1.8rem', fontWeight: '800', color: 'var(--text-main)' }}>
                   {teacher.name}
                 </h1>
                 <span className="badge badge-coral" style={{ fontSize: '0.82rem' }}>
@@ -182,7 +182,7 @@ export default function TeacherDetail({
             }}
           >
             <div style={{ fontSize: '3rem', marginBottom: '14px' }}>✨</div>
-            <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff' }}>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: 'var(--text-main)' }}>
               아직 등록된 앱이 없습니다
             </h3>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '24px' }}>

@@ -7,7 +7,9 @@ import {
   Database, 
   CheckCircle2, 
   AlertCircle,
-  FolderOpen
+  FolderOpen,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 export default function Header({ 
@@ -21,14 +23,16 @@ export default function Header({
   isSupabaseConnected,
   activeView,
   setActiveView,
-  selectedTeacher
+  selectedTeacher,
+  theme,
+  onToggleTheme
 }) {
   return (
     <header style={{
       position: 'sticky',
       top: 0,
       zIndex: 100,
-      background: 'rgba(11, 15, 25, 0.85)',
+      background: 'var(--header-bg)',
       backdropFilter: 'blur(20px)',
       WebkitBackdropFilter: 'blur(20px)',
       borderBottom: '1px solid var(--border-color)',
@@ -73,7 +77,7 @@ export default function Header({
               <h1 style={{ 
                 fontSize: '1.25rem', 
                 fontWeight: '800', 
-                background: 'linear-gradient(90deg, #ffffff, #fca5a5)', 
+                background: 'var(--brand-title-gradient)', 
                 WebkitBackgroundClip: 'text', 
                 WebkitTextFillColor: 'transparent',
                 letterSpacing: '-0.02em'
@@ -118,7 +122,7 @@ export default function Header({
               paddingRight: '16px',
               height: '42px',
               borderRadius: 'var(--radius-full)',
-              background: 'rgba(23, 32, 51, 0.9)'
+              background: 'var(--input-bg)'
             }}
           />
           {searchQuery && (
@@ -144,14 +148,27 @@ export default function Header({
         {/* Right: Actions and Status */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
 
-
+          {/* Dark / Light Theme Toggle Button */}
+          <button 
+            className="btn btn-secondary btn-icon"
+            onClick={onToggleTheme}
+            title={theme === 'dark' ? "라이트 모드로 전환" : "다크 모드로 전환"}
+            style={{ width: '38px', height: '38px', borderRadius: '12px' }}
+            aria-label="화면 테마 토글 (다크/라이트 모드)"
+          >
+            {theme === 'dark' ? (
+              <Sun size={18} style={{ color: '#f59e0b' }} />
+            ) : (
+              <Moon size={18} style={{ color: '#6366f1' }} />
+            )}
+          </button>
 
           {/* Settings Button */}
           <button 
             className="btn btn-secondary btn-icon"
             onClick={onOpenSettings}
             title="Supabase & 구글 드라이브 환경설정"
-            style={{ width: '36px', height: '36px' }}
+            style={{ width: '38px', height: '38px', borderRadius: '12px' }}
           >
             <Settings size={17} />
           </button>

@@ -139,7 +139,7 @@ export default function UploadModal({
               <Upload size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#fff' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--text-main)' }}>
                 새로운 스마트 앱 등록
               </h2>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>

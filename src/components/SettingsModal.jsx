@@ -79,7 +79,7 @@ export default function SettingsModal({
               <Settings size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#fff' }}>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-main)' }}>
                 환경설정 (Supabase & 구글 드라이브)
               </h2>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
@@ -111,7 +111,7 @@ export default function SettingsModal({
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Database size={18} style={{ color: '#3ecf8e' }} />
-                <span style={{ fontWeight: '700', fontSize: '0.95rem', color: '#fff' }}>
+                <span style={{ fontWeight: '700', fontSize: '0.95rem', color: 'var(--text-main)' }}>
                   Supabase 데이터베이스 연동
                 </span>
               </div>
