@@ -289,7 +289,14 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           alignItems: 'center',
           zIndex: 3
         }}>
-          <span className={`badge ${getCategoryBadgeClass(app.category)}`}>
+          <span 
+            className={`badge ${getCategoryBadgeClass(app.category)}`}
+            style={{ 
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.25)', 
+              backdropFilter: 'blur(6px)',
+              fontWeight: '800'
+            }}
+          >
             {app.category || '일반'}
           </span>
         </div>
@@ -339,42 +346,48 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           {app.title}
         </h3>
 
-        {/* Teacher Info Row */}
-        {teacher && (
-          <div 
-            onClick={(e) => {
-              e.stopPropagation();
-              if (onSelectTeacher) onSelectTeacher(teacher);
-            }}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              marginBottom: '12px',
-              cursor: 'pointer',
-              width: 'fit-content'
-            }}
-          >
-            <div style={{
-              width: '24px',
-              height: '24px',
-              borderRadius: '50%',
-              background: 'rgba(255, 107, 74, 0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '0.85rem'
-            }}>
-              {teacher.icon_emoji || '👩‍🏫'}
+        {/* Teacher Info Row (Displays Teacher Name without team info) */}
+        {(() => {
+          const currentTeacher = teacher || (teachers && teachers.find(t => t.id === app.teacher_id));
+          const teacherName = currentTeacher ? currentTeacher.name : (app.teacher_name || app.teacherName || null);
+          const teacherEmoji = currentTeacher ? (currentTeacher.icon_emoji || '👩‍🏫') : '👩‍🏫';
+
+          if (!teacherName) return null;
+
+          return (
+            <div 
+              onClick={(e) => {
+                e.stopPropagation();
+                if (onSelectTeacher && currentTeacher) onSelectTeacher(currentTeacher);
+              }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                marginBottom: '10px',
+                cursor: currentTeacher ? 'pointer' : 'default',
+                width: 'fit-content'
+              }}
+            >
+              <div style={{
+                width: '26px',
+                height: '26px',
+                borderRadius: '50%',
+                background: 'rgba(255, 107, 74, 0.18)',
+                border: '1px solid rgba(255, 107, 74, 0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '0.9rem'
+              }}>
+                {teacherEmoji}
+              </div>
+              <span style={{ fontSize: '0.95rem', fontWeight: '800', color: 'var(--primary)' }}>
+                {teacherName} 선생님
+              </span>
             </div>
-            <span style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--primary)' }}>
-              {teacher.name}
-            </span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-subtle)' }}>
-              ({teacher.department || '성동복지관'})
-            </span>
-          </div>
-        )}
+          );
+        })()}
 
         {/* Description */}
         <p style={{
