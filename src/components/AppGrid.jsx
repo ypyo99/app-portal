@@ -114,12 +114,11 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
         </div>
       </div>
 
-      {/* Category Pills Bar */}
+      {/* Category Pills */}
       <div style={{
         display: 'flex',
-        gap: '8px',
-        overflowX: 'auto',
-        paddingBottom: '8px',
+        flexWrap: 'wrap',
+        gap: '8px 10px',
         marginBottom: '24px'
       }}>
         {categories.map((cat) => (
