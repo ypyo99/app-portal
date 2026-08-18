@@ -394,27 +394,26 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
         {/* Stats & Launch CTA */}
         <div style={{
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
+          flexDirection: 'column',
+          gap: '10px',
           paddingTop: '12px',
           borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-          marginTop: 'auto',
-          gap: '8px'
+          marginTop: 'auto'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.76rem', color: 'var(--text-subtle)', whiteSpace: 'nowrap', flexShrink: 0 }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', whiteSpace: 'nowrap' }}>
+          {/* Row 1: Views & Date */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.78rem', color: 'var(--text-subtle)', whiteSpace: 'nowrap' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
               <Eye size={12} />
               {app.view_count || 0}회
             </span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', whiteSpace: 'nowrap' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
               <Calendar size={12} />
               {formattedDate}
             </span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-
-
+          {/* Row 2: Action Buttons */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', width: '100%' }}>
             {/* Edit Button */}
             {onEditApp && (
               <button
@@ -425,13 +424,14 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                 }}
                 title="앱 정보 수정 (이름, 이모지, 카테고리, 설명)"
                 style={{ 
-                  width: '32px', 
-                  height: '32px', 
+                  width: '36px', 
+                  height: '36px', 
                   borderRadius: 'var(--radius-full)', 
                   background: 'rgba(99, 102, 241, 0.15)',
                   borderColor: 'rgba(99, 102, 241, 0.4)',
                   color: '#818cf8',
-                  transition: 'all 0.2s'
+                  transition: 'all 0.2s',
+                  flexShrink: 0
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.background = 'rgba(99, 102, 241, 0.28)';
@@ -442,11 +442,11 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                   e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.4)';
                 }}
               >
-                <Edit3 size={13} />
+                <Edit3 size={14} />
               </button>
             )}
 
-            {/* Delete Button — only shown when onDeleteApp prop is provided */}
+            {/* Delete Button */}
             {onDeleteApp && (
               <button
                 className="btn btn-secondary btn-icon"
@@ -456,13 +456,14 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                 }}
                 title="앱 삭제"
                 style={{ 
-                  width: '32px', 
-                  height: '32px', 
+                  width: '36px', 
+                  height: '36px', 
                   borderRadius: 'var(--radius-full)', 
                   background: 'rgba(239, 68, 68, 0.1)',
                   borderColor: 'rgba(239, 68, 68, 0.35)',
                   color: '#f87171',
-                  transition: 'all 0.2s'
+                  transition: 'all 0.2s',
+                  flexShrink: 0
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.background = 'rgba(239, 68, 68, 0.25)';
@@ -473,21 +474,27 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                   e.currentTarget.style.borderColor = 'rgba(239, 68, 68, 0.35)';
                 }}
               >
-                <Trash2 size={13} />
+                <Trash2 size={14} />
               </button>
             )}
 
+            {/* Launch Button */}
             <button
               className="btn btn-primary btn-sm"
               onClick={() => onRunApp(app)}
               style={{
-                padding: '7px 16px',
-                fontSize: '0.84rem',
+                flex: 1,
+                padding: '8px 16px',
+                fontSize: '0.86rem',
                 fontWeight: '700',
-                borderRadius: 'var(--radius-full)'
+                borderRadius: 'var(--radius-full)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px'
               }}
             >
-              <Play size={13} fill="#fff" />
+              <Play size={14} fill="#fff" />
               <span>실행하기</span>
             </button>
           </div>
