@@ -32,7 +32,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
     return apps.filter(app => {
       // Category filter
       if (selectedCategory !== 'all' && app.category !== selectedCategory) return false;
-      
+
       // Storage filter
       if (storageFilter === 'gdrive' && !app.drive_file_url) return false;
       if (storageFilter === 'html' && app.drive_file_url) return false;
@@ -52,7 +52,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
 
   return (
     <section>
-      
+
       {/* Control Bar: Categories & Sorting */}
       <div style={{
         display: 'flex',
@@ -62,7 +62,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
         gap: '16px',
         marginBottom: '24px'
       }}>
-        
+
         {/* Title */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <div style={{
@@ -87,7 +87,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
 
         {/* Filters & Sorting Controls */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-          
+
 
 
           {/* Sort Select */}
@@ -139,7 +139,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
               color: selectedCategory === cat ? '#ffffff' : 'var(--text-muted)'
             }}
           >
-            {cat === 'all' ? '전체 카테고리' : cat}
+            {cat === 'all' ? '전체' : cat}
           </button>
         ))}
       </div>
@@ -161,7 +161,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
           ))}
         </div>
       ) : (
-        <div 
+        <div
           className="glass-panel"
           style={{
             padding: '60px 20px',
@@ -177,7 +177,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
           <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '20px' }}>
             다른 카테고리나 필터를 선택해보세요.
           </p>
-          <button 
+          <button
             className="btn btn-secondary btn-sm"
             onClick={() => {
               setSelectedCategory('all');
