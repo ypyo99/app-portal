@@ -79,10 +79,10 @@ export default function TeacherModal({ onClose, onSaveTeacher }) {
               <UserPlus size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-main)' }}>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#ffffff' }}>
                 새로운 선생님 등록
               </h2>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+              <p style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.75)' }}>
                 Supabase `teachers` 테이블에 새로운 선생님 정보를 등록합니다.
               </p>
             </div>

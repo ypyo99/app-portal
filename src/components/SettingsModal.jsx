@@ -79,10 +79,10 @@ export default function SettingsModal({
               <Settings size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-main)' }}>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#ffffff' }}>
                 환경설정 (Supabase & 구글 드라이브)
               </h2>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+              <p style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.75)' }}>
                 데이터베이스 연동 및 공유 스토리지 설정
               </p>
             </div>

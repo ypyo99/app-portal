@@ -38,10 +38,10 @@ export default function SupabaseGuideModal({ onClose }) {
               <Database size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--text-main)' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#ffffff' }}>
                 Supabase 테이블 생성 가이드
               </h2>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+              <p style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.75)' }}>
                 `teachers` 및 `apps` 테이블을 1분 만에 구성하는 방법
               </p>
             </div>

@@ -110,10 +110,10 @@ export default function EditAppModal({
               <Edit3 size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-main)' }}>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#ffffff' }}>
                 앱 정보 수정
               </h2>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+              <p style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.75)' }}>
                 등록된 앱의 이름, 아이콘, 카테고리 및 설명을 수정합니다.
               </p>
             </div>

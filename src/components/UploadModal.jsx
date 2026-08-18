@@ -139,10 +139,10 @@ export default function UploadModal({
               <Upload size={20} />
             </div>
             <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--text-main)' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#ffffff' }}>
                 새로운 스마트 앱 등록
               </h2>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+              <p style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.75)' }}>
                 HTML을 붙여넣기 해서 앱을 등록합니다.
               </p>
             </div>

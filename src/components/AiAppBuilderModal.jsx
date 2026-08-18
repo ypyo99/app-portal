@@ -247,7 +247,7 @@ export default function AiAppBuilderModal({
             </div>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--text-main)', margin: 0 }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#ffffff', margin: 0 }}>
                   AI 프롬프트 앱 스튜디오
                 </h2>
                 <span className="badge badge-purple" style={{ fontSize: '0.75rem', padding: '2px 8px' }}>
