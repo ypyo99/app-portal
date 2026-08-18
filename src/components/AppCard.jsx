@@ -348,11 +348,9 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
 
         {/* Teacher Info Row (Displays Teacher Name without team info) */}
         {(() => {
-          const currentTeacher = teacher || (teachers && teachers.find(t => t.id === app.teacher_id));
-          const teacherName = currentTeacher ? currentTeacher.name : (app.teacher_name || app.teacherName || null);
+          const currentTeacher = teacher || (teachers && teachers.find(t => String(t.id) === String(app.teacher_id)));
+          const teacherName = currentTeacher ? currentTeacher.name : (app.teacher_name || app.teacherName || '선생님');
           const teacherEmoji = currentTeacher ? (currentTeacher.icon_emoji || '👩‍🏫') : '👩‍🏫';
-
-          if (!teacherName) return null;
 
           return (
             <div 
@@ -374,7 +372,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                 height: '26px',
                 borderRadius: '50%',
                 background: 'rgba(255, 107, 74, 0.18)',
-                border: '1px solid rgba(255, 107, 74, 0.3)',
+                border: '1px solid rgba(255, 107, 74, 0.35)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -382,7 +380,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
               }}>
                 {teacherEmoji}
               </div>
-              <span style={{ fontSize: '0.95rem', fontWeight: '800', color: 'var(--primary)' }}>
+              <span style={{ fontSize: '0.96rem', fontWeight: '800', color: 'var(--primary)' }}>
                 {teacherName} 선생님
               </span>
             </div>
