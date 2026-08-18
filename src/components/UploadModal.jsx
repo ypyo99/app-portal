@@ -253,35 +253,33 @@ export default function UploadModal({
 
             {/* HTML Code Input */}
             <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px', flexWrap: 'wrap' }}>
+                  <button
+                    type="button"
+                    onClick={handlePasteFromClipboard}
+                    style={{
+                      background: 'linear-gradient(135deg, #9333ea 0%, #c026d3 100%)',
+                      border: 'none',
+                      color: '#ffffff',
+                      padding: '7px 16px',
+                      borderRadius: '8px',
+                      fontSize: '0.9rem',
+                      cursor: 'pointer',
+                      fontWeight: '700',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      boxShadow: '0 4px 12px rgba(147, 51, 234, 0.35)',
+                      transition: 'all 0.15s ease'
+                    }}
+                  >
+                    <ClipboardPaste size={15} />
+                    <span>📋 클립보드에서 붙여넣기</span>
+                  </button>
+
                   <label className="form-label" style={{ fontSize: '0.94rem', margin: 0 }}>
                     HTML/CSS/JavaScript 코드 직접 입력
                   </label>
-                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                    <button
-                      type="button"
-                      onClick={handlePasteFromClipboard}
-                      style={{
-                        background: 'linear-gradient(135deg, #9333ea 0%, #c026d3 100%)',
-                        border: 'none',
-                        color: '#ffffff',
-                        padding: '6px 14px',
-                        borderRadius: '8px',
-                        fontSize: '0.86rem',
-                        cursor: 'pointer',
-                        fontWeight: '700',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '6px',
-                        boxShadow: '0 4px 12px rgba(147, 51, 234, 0.35)',
-                        transition: 'all 0.15s ease'
-                      }}
-                    >
-                      <ClipboardPaste size={14} />
-                      <span>📋 클립보드에서 붙여넣기</span>
-                    </button>
-
-                  </div>
                 </div>
                 <textarea
                   className="form-textarea"
