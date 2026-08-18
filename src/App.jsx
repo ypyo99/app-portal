@@ -292,7 +292,7 @@ export default function App() {
       }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
           <div>
-            🌟 <strong>성동복지관 선생님 앱 쉐어스페이스</strong> | 에듀테크 & 클라우드 연동 플랫폼
+            🌟 <strong>성동복지관 선생님 앱 쉐어스페이스</strong>
           </div>
         </div>
       </footer>
