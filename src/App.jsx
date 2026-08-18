@@ -210,15 +210,7 @@ export default function App() {
                 브라우저에서 바로 실행해보세요!
               </h1>
 
-              <p style={{
-                fontSize: '1.05rem',
-                color: '#cbd5e1',
-                lineHeight: '1.7',
-                marginBottom: '26px'
-              }}>
-                복지관 선생님들이 연습용이나 수업용으로 제작한 다양한 앱을 쉽게 공유하고,
-                별도 설치 없이 웹 브라우저에서 모바일·태블릿·PC 화면으로 즉시 체험해볼 수 있습니다.
-              </p>
+
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <button
