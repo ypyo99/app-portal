@@ -235,17 +235,6 @@ export default function TeacherList({
                       <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: '#fff', letterSpacing: '-0.01em' }}>
                         {teacher.name}
                       </h3>
-                      <span className="badge" style={{
-                        marginTop: '3px',
-                        fontSize: '0.75rem',
-                        padding: '2px 8px',
-                        background: `${teacherColor}20`,
-                        color: teacherColor,
-                        border: `1px solid ${teacherColor}40`,
-                        fontWeight: '700'
-                      }}>
-                        {teamText}
-                      </span>
                     </div>
                   </div>
 
