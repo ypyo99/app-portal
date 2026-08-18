@@ -97,12 +97,13 @@ export default function TeacherList({
         </div>
 
         {/* Right Controls: Department Filter Tabs & Fold/Unfold Toggle */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-          {/* Department Filter Tabs: 1팀, 2팀, 3팀, 취업팀 */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'nowrap' }}>
+          {/* Department Filter Tabs & Fold/Unfold Toggle in one single bar */}
           <div style={{
             display: 'flex',
-            gap: '6px',
-            flexWrap: 'wrap',
+            alignItems: 'center',
+            gap: '5px',
+            flexWrap: 'nowrap',
             background: 'rgba(0, 0, 0, 0.25)',
             padding: '4px',
             borderRadius: 'var(--radius-full)',
@@ -126,6 +127,7 @@ export default function TeacherList({
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '6px',
+                    whiteSpace: 'nowrap',
                     background: isSelected 
                       ? (dept.id === '1팀' ? '#ff6b4a' : dept.id === '2팀' ? '#3b82f6' : dept.id === '3팀' ? '#10b981' : dept.id === '취업팀' ? '#a855f7' : '#ff6b4a')
                       : 'transparent',
@@ -146,31 +148,35 @@ export default function TeacherList({
                 </button>
               );
             })}
-          </div>
 
-          {/* Toggle Fold/Unfold Button */}
-          <button
-            onClick={toggleCollapse}
-            className="btn btn-secondary btn-sm"
-            title={isCollapsed ? "선생님 목록 펼치기" : "선생님 목록 접기"}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              padding: '7px 14px',
-              borderRadius: 'var(--radius-full)',
-              fontWeight: '700',
-              fontSize: '0.84rem',
-              background: isCollapsed ? 'rgba(255, 107, 74, 0.18)' : 'rgba(255, 255, 255, 0.08)',
-              borderColor: isCollapsed ? 'rgba(255, 107, 74, 0.4)' : 'var(--border-color)',
-              color: isCollapsed ? '#ff8b73' : '#cbd5e1',
-              cursor: 'pointer',
-              transition: 'all 0.2s ease'
-            }}
-          >
-            {isCollapsed ? <ChevronDown size={15} /> : <ChevronUp size={15} />}
-            <span>{isCollapsed ? '펼치기' : '접기'}</span>
-          </button>
+            {/* Subtle Vertical Divider */}
+            <div style={{ width: '1px', height: '16px', background: 'rgba(255, 255, 255, 0.15)', margin: '0 2px' }} />
+
+            {/* Toggle Fold/Unfold Button */}
+            <button
+              onClick={toggleCollapse}
+              title={isCollapsed ? "선생님 목록 펼치기" : "선생님 목록 접기"}
+              style={{
+                padding: '7px 14px',
+                borderRadius: 'var(--radius-full)',
+                fontSize: '0.84rem',
+                fontWeight: '700',
+                border: '1px solid',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '5px',
+                whiteSpace: 'nowrap',
+                background: isCollapsed ? 'rgba(255, 107, 74, 0.25)' : 'rgba(255, 255, 255, 0.08)',
+                borderColor: isCollapsed ? 'rgba(255, 107, 74, 0.4)' : 'transparent',
+                color: isCollapsed ? '#ff8b73' : '#cbd5e1'
+              }}
+            >
+              {isCollapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
+              <span>{isCollapsed ? '펼치기' : '접기'}</span>
+            </button>
+          </div>
         </div>
       </div>
 
