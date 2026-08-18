@@ -191,11 +191,7 @@ export default function App() {
             }}
           >
             <div style={{ maxWidth: '820px' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
-                <span className="badge badge-coral" style={{ padding: '6px 14px', fontSize: '0.85rem' }}>
-                  <Sparkles size={14} /> 성동복지관 선생님 스마트 워크스페이스
-                </span>
-              </div>
+
 
               <h1 style={{
                 fontSize: '2.4rem',
