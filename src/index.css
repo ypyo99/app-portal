@@ -483,8 +483,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .app-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px;
 }
 
 /* AI App Builder specific styles */
@@ -567,7 +567,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Small Smartphone Screens (<= 640px) */
 @media (max-width: 640px) {
-  .teacher-grid, .app-grid {
+  .teacher-grid {
     grid-template-columns: 1fr !important;
   }
 
