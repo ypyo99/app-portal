@@ -12,6 +12,7 @@
   --bg-glass: rgba(17, 24, 39, 0.75);
   --bg-glass-card: rgba(255, 255, 255, 0.04);
   --collapse-btn-bg: rgba(255, 255, 255, 0.08);
+  --section-box-bg: rgba(0, 0, 0, 0.35);
   --header-bg: rgba(11, 15, 25, 0.85);
   --modal-bg: #121927;
   --modal-overlay-bg: rgba(4, 7, 14, 0.78);
@@ -60,6 +61,7 @@
   --bg-glass: rgba(255, 255, 255, 0.85);
   --bg-glass-card: rgba(0, 0, 0, 0.04);
   --collapse-btn-bg: #e2e8f0;
+  --section-box-bg: #e2e8f0;
   --header-bg: rgba(255, 255, 255, 0.88);
   --modal-bg: #ffffff;
   --modal-overlay-bg: rgba(15, 23, 42, 0.4);

@@ -244,7 +244,7 @@ export default function UploadModal({
 
           {/* Upload Method Content */}
           <div style={{
-            background: 'var(--input-bg)',
+            background: 'var(--section-box-bg)',
             borderRadius: 'var(--radius-lg)',
             padding: '16px',
             border: '1px solid var(--border-color)',
