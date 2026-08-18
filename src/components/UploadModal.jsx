@@ -278,24 +278,7 @@ export default function UploadModal({
                       <ClipboardPaste size={14} />
                       <span>📋 클립보드에서 붙여넣기</span>
                     </button>
-                    {appCode.trim() && (
-                      <button
-                        type="button"
-                        onClick={() => downloadAppHtmlFile(currentTeacher?.name, title, appCode)}
-                        style={{
-                          background: 'rgba(16, 185, 129, 0.15)',
-                          border: '1px solid rgba(16, 185, 129, 0.4)',
-                          color: '#6ee7b7',
-                          padding: '4px 10px',
-                          borderRadius: '6px',
-                          fontSize: '0.75rem',
-                          cursor: 'pointer',
-                          fontWeight: '600'
-                        }}
-                      >
-                        📥 HTML 파일 다운로드
-                      </button>
-                    )}
+
                   </div>
                 </div>
                 <textarea
