@@ -185,8 +185,8 @@ export default function UploadModal({
             </select>
           </div>
 
-          {/* App Title & Category in 2-Columns */}
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '16px' }}>
+          {/* App Title & Category in Responsive 2-Columns */}
+          <div className="form-row-2col">
             <div className="form-group">
               <label className="form-label">
                 앱 제목 <span style={{ color: '#ff6b4a' }}>*</span>
@@ -225,10 +225,10 @@ export default function UploadModal({
                   type="button"
                   onClick={() => setIconEmoji(emoji)}
                   style={{
-                    width: '38px',
-                    height: '38px',
-                    borderRadius: '10px',
-                    fontSize: '1.3rem',
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '12px',
+                    fontSize: '1.45rem',
                     border: '1px solid',
                     cursor: 'pointer',
                     background: iconEmoji === emoji ? 'rgba(255, 107, 74, 0.25)' : 'rgba(255, 255, 255, 0.05)',
@@ -254,7 +254,7 @@ export default function UploadModal({
             {/* HTML Code Input */}
             <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
-                  <label className="form-label" style={{ fontSize: '0.84rem', margin: 0 }}>
+                  <label className="form-label" style={{ fontSize: '0.94rem', margin: 0 }}>
                     HTML/CSS/JavaScript 코드 직접 입력
                   </label>
                   <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
@@ -265,9 +265,9 @@ export default function UploadModal({
                         background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(236, 72, 153, 0.25))',
                         border: '1px solid rgba(168, 85, 247, 0.5)',
                         color: '#e9d5ff',
-                        padding: '4px 12px',
-                        borderRadius: '6px',
-                        fontSize: '0.78rem',
+                        padding: '6px 14px',
+                        borderRadius: '8px',
+                        fontSize: '0.86rem',
                         cursor: 'pointer',
                         fontWeight: '700',
                         display: 'flex',
@@ -289,7 +289,7 @@ export default function UploadModal({
                   placeholder="<!DOCTYPE html><html><body><h1>나의 첫 번째 복지관 앱</h1></body></html>"
                   value={appCode}
                   onChange={(e) => setAppCode(e.target.value)}
-                  style={{ fontFamily: 'monospace', fontSize: '0.82rem' }}
+                  style={{ fontFamily: 'monospace', fontSize: '0.92rem' }}
                 />
               </div>
 

@@ -348,20 +348,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-label {
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.98rem;
+  font-weight: 700;
   color: var(--text-main);
+  margin-bottom: 2px;
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 13px 16px;
   background: var(--input-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   color: var(--text-main);
   font-family: var(--font-main);
-  font-size: 0.95rem;
+  font-size: 1.02rem;
+  font-weight: 500;
   transition: all 0.2s ease;
   outline: none;
 }
@@ -374,7 +376,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-textarea {
   resize: vertical;
-  min-height: 90px;
+  min-height: 95px;
+}
+
+/* Responsive 2-column form rows */
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .form-row-2col {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
 }
 
 /* Modal Overlay */

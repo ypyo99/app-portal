@@ -156,10 +156,10 @@ export default function TeacherModal({ onClose, onSaveTeacher }) {
                   type="button"
                   onClick={() => setIconEmoji(emoji)}
                   style={{
-                    width: '38px',
-                    height: '38px',
-                    borderRadius: '10px',
-                    fontSize: '1.3rem',
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '12px',
+                    fontSize: '1.45rem',
                     border: '1px solid',
                     cursor: 'pointer',
                     background: iconEmoji === emoji ? 'rgba(99, 102, 241, 0.25)' : 'rgba(255, 255, 255, 0.05)',

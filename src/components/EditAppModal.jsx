@@ -194,14 +194,14 @@ export default function EditAppModal({
                   key={emoji}
                   onClick={() => setIconEmoji(emoji)}
                   style={{
-                    width: '38px',
-                    height: '38px',
-                    borderRadius: '10px',
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '12px',
                     border: '1px solid',
                     background: iconEmoji === emoji ? 'rgba(99, 102, 241, 0.25)' : 'rgba(255, 255, 255, 0.05)',
                     borderColor: iconEmoji === emoji ? '#818cf8' : 'var(--border-color)',
                     cursor: 'pointer',
-                    fontSize: '1.2rem',
+                    fontSize: '1.45rem',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
