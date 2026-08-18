@@ -91,11 +91,22 @@ export default function TeacherModal({ onClose, onSaveTeacher }) {
           </div>
 
           <button
-            className="btn btn-secondary btn-icon"
+            className="btn btn-icon"
             onClick={onClose}
-            style={{ width: '34px', height: '34px' }}
+            style={{
+              width: '36px',
+              height: '36px',
+              background: '#e2e8f0',
+              color: '#0f172a',
+              border: '1px solid rgba(0, 0, 0, 0.1)',
+              borderRadius: '10px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer'
+            }}
           >
-            <X size={16} />
+            <X size={18} />
           </button>
         </div>
 
