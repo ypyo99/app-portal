@@ -193,7 +193,7 @@ export default function TeacherList({
               key={teacher.id}
               className="glass-panel glass-panel-hover"
               style={{
-                padding: '16px 20px',
+                padding: '12px 14px',
                 cursor: 'pointer',
                 position: 'relative',
                 display: 'flex',
