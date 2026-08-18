@@ -324,7 +324,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           onMouseLeave={(e) => e.currentTarget.style.opacity = '0'}
         >
           <Play size={24} fill="#fff" />
-          <span>브라우저에서 실행</span>
+          <span>바로 실행</span>
         </div>
       </div>
 

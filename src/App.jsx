@@ -233,7 +233,7 @@ export default function App() {
                 WebkitTextFillColor: 'transparent'
               }}>
                 선생님들이 만든 앱을 공유하고<br />
-                브라우저에서 바로 실행해보세요!
+                바로 실행해보세요!
               </h1>
 
 
