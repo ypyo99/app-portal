@@ -413,7 +413,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           </div>
 
           {/* Row 2: Action Buttons */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', width: '100%', flexWrap: 'nowrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '8px', width: '100%' }}>
             {/* Edit Button */}
             {onEditApp && (
               <button
@@ -424,8 +424,8 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                 }}
                 title="앱 정보 수정 (이름, 이모지, 카테고리, 설명)"
                 style={{ 
-                  width: '34px', 
-                  height: '34px', 
+                  width: '36px', 
+                  height: '36px', 
                   padding: 0,
                   borderRadius: 'var(--radius-full)', 
                   background: 'rgba(99, 102, 241, 0.15)',
@@ -443,7 +443,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                   e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.4)';
                 }}
               >
-                <Edit3 size={13} />
+                <Edit3 size={14} />
               </button>
             )}
 
@@ -457,8 +457,8 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                 }}
                 title="앱 삭제"
                 style={{ 
-                  width: '34px', 
-                  height: '34px', 
+                  width: '36px', 
+                  height: '36px', 
                   padding: 0,
                   borderRadius: 'var(--radius-full)', 
                   background: 'rgba(239, 68, 68, 0.1)',
@@ -476,30 +476,27 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                   e.currentTarget.style.borderColor = 'rgba(239, 68, 68, 0.35)';
                 }}
               >
-                <Trash2 size={13} />
+                <Trash2 size={14} />
               </button>
             )}
 
-            {/* Launch Button */}
+            {/* Launch Play Icon Button */}
             <button
-              className="btn btn-primary btn-sm"
+              className="btn btn-primary btn-icon"
               onClick={() => onRunApp(app)}
+              title="앱 실행하기"
               style={{
-                flex: 1,
-                minWidth: 0,
-                padding: '7px 10px',
-                fontSize: '0.82rem',
-                fontWeight: '700',
+                width: '36px',
+                height: '36px',
+                padding: 0,
                 borderRadius: 'var(--radius-full)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '4px',
-                whiteSpace: 'nowrap'
+                flexShrink: 0
               }}
             >
-              <Play size={13} fill="#fff" style={{ flexShrink: 0 }} />
-              <span>실행하기</span>
+              <Play size={14} fill="#fff" />
             </button>
           </div>
         </div>
