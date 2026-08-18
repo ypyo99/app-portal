@@ -277,7 +277,7 @@ export default function UploadModal({
                     <span>📋 클립보드에서 붙여넣기</span>
                   </button>
 
-                  <label className="form-label" style={{ fontSize: '0.94rem', margin: 0 }}>
+                  <label className="form-label" style={{ fontSize: '1.05rem', margin: 0 }}>
                     HTML/CSS/JavaScript 코드 직접 입력
                   </label>
                 </div>

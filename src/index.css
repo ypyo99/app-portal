@@ -350,10 +350,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-label {
-  font-size: 0.98rem;
-  font-weight: 700;
+  font-size: 1.12rem;
+  font-weight: 800;
   color: var(--text-main);
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .form-input, .form-select, .form-textarea {
