@@ -102,10 +102,10 @@ export default function TeacherList({
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '5px',
+            gap: '2px',
             flexWrap: 'nowrap',
             background: 'rgba(0, 0, 0, 0.25)',
-            padding: '4px',
+            padding: '3px',
             borderRadius: 'var(--radius-full)',
             border: '1px solid var(--border-color)'
           }}>
@@ -116,7 +116,7 @@ export default function TeacherList({
                   key={dept.id}
                   onClick={() => handleSelectDept(dept.id)}
                   style={{
-                    padding: '7px 16px',
+                    padding: '6px 11px',
                     borderRadius: 'var(--radius-full)',
                     fontSize: '0.84rem',
                     fontWeight: '700',
