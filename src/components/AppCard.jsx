@@ -349,7 +349,9 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
         {/* Teacher Info Row (Displays Teacher Name without team info) */}
         {(() => {
           const currentTeacher = teacher || (teachers && teachers.find(t => String(t.id) === String(app.teacher_id)));
-          const teacherName = currentTeacher ? currentTeacher.name : (app.teacher_name || app.teacherName || '선생님');
+          const rawName = currentTeacher ? currentTeacher.name : (app.teacher_name || app.teacherName || '');
+          const cleanName = rawName.replace(/선생님$/g, '').trim();
+          const displayTeacherName = cleanName ? `${cleanName} 선생님` : '선생님';
           const teacherEmoji = currentTeacher ? (currentTeacher.icon_emoji || '👩‍🏫') : '👩‍🏫';
 
           return (
@@ -381,7 +383,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                 {teacherEmoji}
               </div>
               <span style={{ fontSize: '0.96rem', fontWeight: '800', color: 'var(--primary)' }}>
-                {teacherName} 선생님
+                {displayTeacherName}
               </span>
             </div>
           );
