@@ -92,7 +92,7 @@ export default function TeacherList({
             </span>
           </div>
           <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginTop: '4px' }}>
-            선생님 카드를 클릭하면 각 선생님이 직접 개발한 스마트 앱 목록을 확인하고 실행할 수 있습니다. (1팀 ➔ 2팀 ➔ 3팀 ➔ 취업팀 조별 순 정렬)
+            선생님 카드를 클릭하면 각 선생님이 직접 개발한 스마트 앱 목록을 확인하고 실행할 수 있습니다.
           </p>
         </div>
 
