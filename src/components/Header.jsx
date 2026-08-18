@@ -85,7 +85,7 @@ export default function Header({
                 성동복지관
               </h1>
               <span className="badge badge-coral" style={{ fontSize: '0.72rem', padding: '2px 8px' }}>
-                선생님 앱 쉐어
+                앱 쉐어스페이스
               </span>
             </div>
             <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>

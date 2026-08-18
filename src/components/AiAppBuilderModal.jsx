@@ -924,7 +924,7 @@ export default function AiAppBuilderModal({
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>별도 개발 도구 없이 브라우저에서 바로 조작 테스트</div>
                     </div>
                     <div style={{ background: 'rgba(255,255,255,0.03)', padding: '12px', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-                      <div style={{ fontWeight: '700', fontSize: '0.82rem', color: '#fbcfe8', marginBottom: '4px' }}>💖 선생님 앱 쉐어</div>
+                      <div style={{ fontWeight: '700', fontSize: '0.82rem', color: '#fbcfe8', marginBottom: '4px' }}>💖 앱 쉐어스페이스</div>
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>마음에 들면 내 이름으로 1초 만에 등록 및 공유</div>
                     </div>
                   </div>
