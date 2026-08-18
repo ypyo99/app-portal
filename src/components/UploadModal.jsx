@@ -127,14 +127,16 @@ export default function UploadModal({
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <div style={{
-              width: '36px',
-              height: '36px',
-              borderRadius: '10px',
-              background: 'rgba(255, 107, 74, 0.15)',
-              color: '#ff6b4a',
+              width: '38px',
+              height: '38px',
+              borderRadius: '12px',
+              background: 'rgba(255, 112, 67, 0.25)',
+              border: '1px solid rgba(255, 112, 67, 0.5)',
+              color: '#ff7043',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              boxShadow: '0 2px 10px rgba(255, 112, 67, 0.3)'
             }}>
               <Upload size={20} />
             </div>
