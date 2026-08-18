@@ -32,7 +32,7 @@ export default function TeacherList({
 
   // Defined Department Tabs: 전체, 1팀, 2팀, 3팀, 취업팀
   const departmentTabs = [
-    { id: 'all', label: '전체 부서' },
+    { id: 'all', label: '전체' },
     { id: '1팀', label: '1팀' },
     { id: '2팀', label: '2팀' },
     { id: '3팀', label: '3팀' },
@@ -110,7 +110,6 @@ export default function TeacherList({
             border: '1px solid var(--border-color)'
           }}>
             {departmentTabs.map(dept => {
-              const count = getTeacherCountByDept(dept.id);
               const isSelected = selectedDept === dept.id;
               return (
                 <button
@@ -136,15 +135,6 @@ export default function TeacherList({
                   }}
                 >
                   <span>{dept.label}</span>
-                  <span style={{
-                    fontSize: '0.72rem',
-                    opacity: 0.85,
-                    background: isSelected ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.08)',
-                    padding: '1px 6px',
-                    borderRadius: '10px'
-                  }}>
-                    {count}
-                  </span>
                 </button>
               );
             })}
