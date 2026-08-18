@@ -382,7 +382,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
               }}>
                 {teacherEmoji}
               </div>
-              <span style={{ fontSize: '0.96rem', fontWeight: '800', color: 'var(--primary)' }}>
+              <span style={{ fontSize: '0.96rem', fontWeight: '800', color: 'var(--teacher-name-color)' }}>
                 {displayTeacherName}
               </span>
             </div>

@@ -28,6 +28,7 @@
   --text-main: #f3f4f6;
   --text-muted: #9ca3af;
   --text-subtle: #6b7280;
+  --teacher-name-color: #93c5fd;
 
   /* Accents */
   --primary: #ff6347;
@@ -77,6 +78,7 @@
   --text-main: #0f172a;
   --text-muted: #475569;
   --text-subtle: #64748b;
+  --teacher-name-color: #2563eb;
 
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
