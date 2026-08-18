@@ -130,13 +130,13 @@ export default function UploadModal({
               width: '38px',
               height: '38px',
               borderRadius: '12px',
-              background: 'rgba(255, 112, 67, 0.25)',
-              border: '1px solid rgba(255, 112, 67, 0.5)',
-              color: '#ff7043',
+              background: 'rgba(255, 69, 0, 0.25)',
+              border: '1px solid rgba(255, 69, 0, 0.6)',
+              color: '#ff4500',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 2px 10px rgba(255, 112, 67, 0.3)'
+              boxShadow: '0 2px 10px rgba(255, 69, 0, 0.4)'
             }}>
               <Upload size={20} />
             </div>
