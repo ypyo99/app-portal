@@ -322,7 +322,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
       </div>
 
       {/* Card Content Area */}
-      <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+      <div style={{ padding: '16px 14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
         
         {/* Title */}
         <h3 
@@ -413,7 +413,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           </div>
 
           {/* Row 2: Action Buttons */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', width: '100%' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', width: '100%', flexWrap: 'nowrap' }}>
             {/* Edit Button */}
             {onEditApp && (
               <button
@@ -424,8 +424,9 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                 }}
                 title="앱 정보 수정 (이름, 이모지, 카테고리, 설명)"
                 style={{ 
-                  width: '36px', 
-                  height: '36px', 
+                  width: '34px', 
+                  height: '34px', 
+                  padding: 0,
                   borderRadius: 'var(--radius-full)', 
                   background: 'rgba(99, 102, 241, 0.15)',
                   borderColor: 'rgba(99, 102, 241, 0.4)',
@@ -442,7 +443,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                   e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.4)';
                 }}
               >
-                <Edit3 size={14} />
+                <Edit3 size={13} />
               </button>
             )}
 
@@ -456,8 +457,9 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                 }}
                 title="앱 삭제"
                 style={{ 
-                  width: '36px', 
-                  height: '36px', 
+                  width: '34px', 
+                  height: '34px', 
+                  padding: 0,
                   borderRadius: 'var(--radius-full)', 
                   background: 'rgba(239, 68, 68, 0.1)',
                   borderColor: 'rgba(239, 68, 68, 0.35)',
@@ -474,7 +476,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
                   e.currentTarget.style.borderColor = 'rgba(239, 68, 68, 0.35)';
                 }}
               >
-                <Trash2 size={14} />
+                <Trash2 size={13} />
               </button>
             )}
 
@@ -484,17 +486,19 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
               onClick={() => onRunApp(app)}
               style={{
                 flex: 1,
-                padding: '8px 16px',
-                fontSize: '0.86rem',
+                minWidth: 0,
+                padding: '7px 10px',
+                fontSize: '0.82rem',
                 fontWeight: '700',
                 borderRadius: 'var(--radius-full)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '6px'
+                gap: '4px',
+                whiteSpace: 'nowrap'
               }}
             >
-              <Play size={14} fill="#fff" />
+              <Play size={13} fill="#fff" style={{ flexShrink: 0 }} />
               <span>실행하기</span>
             </button>
           </div>
