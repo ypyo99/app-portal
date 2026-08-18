@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스마트 스탬프북</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fdfbf7; color: #2d3748; margin: 0; padding: 20px; text-align: center; }
+    .card { background: white; border: 2px dashed #f6ad55; border-radius: 24px; padding: 20px; max-width: 350px; margin: 0 auto; box-shadow: 0 10px 25px rgba(246,173,85,0.2); }
+    h2 { color: #dd6b20; margin-top: 0; }
+    .stamp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+    .slot { width: 80px; height: 80px; border: 2px solid #edf2f7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; background: #f7fafc; margin: 0 auto; cursor: pointer; transition: 0.2s; }
+    .slot.stamped { background: #feebc8; border-color: #ed8936; animation: stampPop 0.3s ease-out; }
+    @keyframes stampPop { 0% { transform: scale(0.5); } 80% { transform: scale(1.15); } 100% { transform: scale(1); } }
+    .btn { background: #ed8936; color: white; border: none; padding: 12px 24px; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+    .status { margin-top: 14px; font-size: 0.95rem; color: #718096; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>💮 성동 스마트 스탬프</h2>
+    <p style="font-size: 0.9rem; color: #718096; margin: 0;">오늘의 참여 도장을 찍어보세요!</p>
+    <div class="stamp-grid" id="stampGrid"></div>
+    <button class="btn" onclick="addStamp()">+ 오늘 출석 도장 쾅!</button>
+    <div class="status" id="status">현재 <span id="count" style="color:#dd6b20; font-weight:bold;">0</span> / 6 개 모았어요!</div>
+  </div>
+  <script>
+    let stamps = 0;
+    const max = 6;
+    const icons = ['🌟', '💖', '🍀', '🍎', '🌻', '👑'];
+
+    function render() {
+      const grid = document.getElementById('stampGrid');
+      grid.innerHTML = '';
+      for (let i = 0; i < max; i++) {
+        const slot = document.createElement('div');
+        slot.className = 'slot' + (i < stamps ? ' stamped' : '');
+        slot.innerText = i < stamps ? icons[i] : (i + 1);
+        grid.appendChild(slot);
+      }
+      document.getElementById('count').innerText = stamps;
+    }
+
+    function addStamp() {
+      if (stamps < max) {
+        stamps++;
+        render();
+        if (stamps === max) {
+          setTimeout(() => alert('🎉 축하합니다! 스탬프를 모두 모아 복지관 칭찬 선물을 수령하실 수 있습니다!'), 300);
+        }
+      } else {
+        stamps = 0;
+        render();
+      }
+    }
+    render();
+  </script>
+</body>
+</html>

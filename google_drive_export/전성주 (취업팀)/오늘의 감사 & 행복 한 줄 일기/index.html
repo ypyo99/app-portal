@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>행복 한 줄 감사 일기</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #fdf2f8, #f5f3ff); color: #374151; margin: 0; padding: 20px; }
+    .box { background: white; border-radius: 20px; padding: 22px; max-width: 360px; margin: 0 auto; box-shadow: 0 10px 25px rgba(236,72,153,0.12); }
+    h2 { color: #db2777; margin-top: 0; text-align: center; font-size: 1.3rem; }
+    .quote-box { background: #fdf2f8; border-left: 4px solid #ec4899; padding: 10px 14px; border-radius: 8px; font-style: italic; font-size: 0.9rem; color: #9d174d; margin-bottom: 16px; }
+    textarea { width: 100%; height: 85px; border: 1px solid #fbcfe8; border-radius: 12px; padding: 10px; box-sizing: border-box; font-family: inherit; font-size: 0.95rem; outline: none; margin-bottom: 12px; }
+    textarea:focus { border-color: #db2777; box-shadow: 0 0 0 2px rgba(219,39,119,0.2); }
+    .btn { width: 100%; background: #db2777; color: white; border: none; padding: 12px; border-radius: 12px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+    .entries { margin-top: 16px; max-height: 180px; overflow-y: auto; }
+    .entry-item { background: #f9fafb; border-radius: 10px; padding: 10px; margin-bottom: 8px; font-size: 0.9rem; border-left: 3px solid #ec4899; }
+    .entry-time { font-size: 0.75rem; color: #9ca3af; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>💖 오늘의 감사 일기</h2>
+    <div class="quote-box">"작은 감사 하나가 마음에 따스한 봄빛을 선물합니다."</div>
+    <textarea id="diaryInput" placeholder="오늘 복지관에서 기분 좋았던 순간이나 감사한 일을 적어보세요..."></textarea>
+    <button class="btn" onclick="saveEntry()">💌 마음 남기기</button>
+    <div class="entries" id="entriesList"></div>
+  </div>
+  <script>
+    let list = [
+      { text: "아침 프로그램에서 어르신이 활짝 웃으시며 건네주신 귤 하나에 마음이 따뜻해졌습니다.", time: "오늘 10:30" }
+    ];
+    function render() {
+      const el = document.getElementById('entriesList');
+      el.innerHTML = list.map(item => '<div class="entry-item">' + item.text + '<div class="entry-time">' + item.time + '</div></div>').join('');
+    }
+    function saveEntry() {
+      const input = document.getElementById('diaryInput');
+      if (!input.value.trim()) return;
+      list.unshift({ text: input.value.trim(), time: "방금 전" });
+      input.value = '';
+      render();
+    }
+    render();
+  </script>
+</body>
+</html>

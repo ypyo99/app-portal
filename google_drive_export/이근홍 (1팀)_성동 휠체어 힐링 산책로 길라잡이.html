@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성동 휠체어 산책로</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 16px; }
+    .header { text-align: center; margin-bottom: 16px; }
+    h2 { color: #38bdf8; margin: 0 0 6px 0; font-size: 1.3rem; }
+    .route-card { background: #1e293b; border-radius: 16px; padding: 14px; margin-bottom: 12px; border: 1px solid #334155; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: 0.2s; }
+    .route-card:hover { border-color: #38bdf8; background: #24324a; }
+    .icon { font-size: 2.2rem; background: #0f172a; border-radius: 12px; padding: 8px; }
+    .title { font-weight: bold; font-size: 1.05rem; color: #f1f5f9; }
+    .desc { font-size: 0.85rem; color: #94a3b8; margin-top: 4px; }
+    .badge { display: inline-block; background: #0284c7; color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>🗺️ 성동 무장애 힐링 코스</h2>
+    <div style="font-size: 0.85rem; color: #94a3b8;">턱 없는 안전 산책로 & 편의시설 가이드</div>
+  </div>
+  <div class="route-card" onclick="alert('📍 서울숲 무장애 산책로: 경사도 3도 이하 완만 코스, 급수대 및 전동휠체어 충전소 완비')">
+    <div class="icon">🌳</div>
+    <div>
+      <span class="badge">추천 1코스</span>
+      <div class="title">서울숲 바람의 언덕 무장애길</div>
+      <div class="desc">전구간 평지 데크로드 (총 길이 1.2km)</div>
+    </div>
+  </div>
+  <div class="route-card" onclick="alert('📍 응봉산 데크로드: 완만한 지그재그 데크, 장애인 화장실 인접')">
+    <div class="icon">🌸</div>
+    <div>
+      <span class="badge" style="background:#10b981">추천 2코스</span>
+      <div class="title">응봉산 힐링 전망 데크길</div>
+      <div class="desc">야경 및 쉼터 벤치 완비 (총 800m)</div>
+    </div>
+  </div>
+  <div class="route-card" onclick="alert('📍 중랑천 물소리길: 휠체어 우선 통행로, 비상벨 50m 간격 설치')">
+    <div class="icon">🌊</div>
+    <div>
+      <span class="badge" style="background:#a855f7">추천 3코스</span>
+      <div class="title">중랑천 송정제방 무장애길</div>
+      <div class="desc">나무 그늘과 물소리가 함께하는 길 (2.0km)</div>
+    </div>
+  </div>
+</body>
+</html>
