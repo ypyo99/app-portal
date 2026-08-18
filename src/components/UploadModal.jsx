@@ -244,7 +244,7 @@ export default function UploadModal({
 
           {/* Upload Method Content */}
           <div style={{
-            background: 'rgba(0, 0, 0, 0.3)',
+            background: 'var(--input-bg)',
             borderRadius: 'var(--radius-lg)',
             padding: '16px',
             border: '1px solid var(--border-color)',
@@ -262,9 +262,9 @@ export default function UploadModal({
                       type="button"
                       onClick={handlePasteFromClipboard}
                       style={{
-                        background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(236, 72, 153, 0.25))',
-                        border: '1px solid rgba(168, 85, 247, 0.5)',
-                        color: '#e9d5ff',
+                        background: 'linear-gradient(135deg, #9333ea 0%, #c026d3 100%)',
+                        border: 'none',
+                        color: '#ffffff',
                         padding: '6px 14px',
                         borderRadius: '8px',
                         fontSize: '0.86rem',
@@ -273,7 +273,7 @@ export default function UploadModal({
                         display: 'flex',
                         alignItems: 'center',
                         gap: '6px',
-                        boxShadow: '0 2px 8px rgba(168, 85, 247, 0.2)',
+                        boxShadow: '0 4px 12px rgba(147, 51, 234, 0.35)',
                         transition: 'all 0.15s ease'
                       }}
                     >
