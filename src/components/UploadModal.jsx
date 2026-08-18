@@ -253,7 +253,7 @@ export default function UploadModal({
 
             {/* HTML Code Input */}
             <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', flexWrap: 'wrap', gap: '10px' }}>
                   <button
                     type="button"
                     onClick={handlePasteFromClipboard}
