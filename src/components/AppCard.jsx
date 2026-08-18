@@ -392,7 +392,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
         {/* Description */}
         <p style={{
           fontSize: '0.86rem',
-          color: 'var(--text-muted)',
+          color: 'var(--card-desc-color)',
           lineHeight: '1.5',
           marginBottom: '18px',
           display: '-webkit-box',
@@ -414,7 +414,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           marginTop: 'auto'
         }}>
           {/* Row 1: Views & Date */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.78rem', color: 'var(--text-subtle)', whiteSpace: 'nowrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.78rem', color: 'var(--card-stats-color)', whiteSpace: 'nowrap' }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
               <Eye size={12} />
               {app.view_count || 0}회

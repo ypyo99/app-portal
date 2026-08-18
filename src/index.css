@@ -29,6 +29,8 @@
   --text-muted: #9ca3af;
   --text-subtle: #6b7280;
   --teacher-name-color: #93c5fd;
+  --card-desc-color: #f3f4f6;
+  --card-stats-color: #f3f4f6;
 
   /* Accents */
   --primary: #ff6347;
@@ -79,6 +81,8 @@
   --text-muted: #475569;
   --text-subtle: #64748b;
   --teacher-name-color: #2563eb;
+  --card-desc-color: #334155;
+  --card-stats-color: #475569;
 
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
