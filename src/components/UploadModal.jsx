@@ -57,7 +57,7 @@ export default function UploadModal({
   };
 
   // Emojis preset
-  const emojiPresets = ['📱', '🧘‍♂️', '🧩', '⭐', '🧭', '💖', '🎨', '🍱', '🏃‍♀️', '🎵', '🌻', '🎁'];
+  const emojiPresets = ['📱', '🧘‍♂️', '🧩', '🧭', '🎨', '🍱', '🏃‍♀️', '🎵', '🌻', '🎁'];
 
   // Categories preset
   const categories = ['건강/운동', '교육/게임', '참여/출석', '복지/지도', '마음/힐링', '기타'];
@@ -172,6 +172,23 @@ export default function UploadModal({
 
         {/* Modal Body / Form */}
         <form onSubmit={handleSubmit} style={{ padding: '24px' }}>
+          <style>{`
+            .modal-blue-input {
+              background-color: #dbeafe !important;
+              color: #0f172a !important;
+              border: 1.5px solid #93c5fd !important;
+              font-weight: 500 !important;
+            }
+            .modal-blue-input::placeholder {
+              color: #475569 !important;
+              opacity: 0.9 !important;
+            }
+            .modal-blue-input:focus {
+              background-color: #eff6ff !important;
+              border-color: #3b82f6 !important;
+              box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+            }
+          `}</style>
           
           {/* Teacher Selection */}
           <div className="form-group">
@@ -182,14 +199,14 @@ export default function UploadModal({
 
             </div>
             <select
-              className="form-select"
+              className="form-select modal-blue-input"
               value={teacherId}
               onChange={(e) => handleTeacherChange(e.target.value)}
               required
             >
-              <option value="">선생님을 선택해주세요</option>
+              <option value="" style={{ background: '#ffffff', color: '#0f172a' }}>선생님을 선택해주세요</option>
               {teachers.map((t) => (
-                <option key={t.id} value={t.id}>
+                <option key={t.id} value={t.id} style={{ background: '#ffffff', color: '#0f172a' }}>
                   {t.name} ({t.department || '성동복지관'})
                 </option>
               ))}
@@ -204,7 +221,7 @@ export default function UploadModal({
               </label>
               <input
                 type="text"
-                className="form-input"
+                className="form-input modal-blue-input"
                 placeholder="예: 어르신 두뇌 비타민 퀴즈"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -215,12 +232,12 @@ export default function UploadModal({
             <div className="form-group">
               <label className="form-label">카테고리</label>
               <select
-                className="form-select"
+                className="form-select modal-blue-input"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
               >
                 {categories.map((c) => (
-                  <option key={c} value={c}>{c}</option>
+                  <option key={c} value={c} style={{ background: '#ffffff', color: '#0f172a' }}>{c}</option>
                 ))}
               </select>
             </div>
@@ -242,8 +259,8 @@ export default function UploadModal({
                     fontSize: '1.45rem',
                     border: '1px solid',
                     cursor: 'pointer',
-                    background: iconEmoji === emoji ? 'rgba(255, 107, 74, 0.25)' : 'rgba(255, 255, 255, 0.05)',
-                    borderColor: iconEmoji === emoji ? '#ff6b4a' : 'var(--border-color)',
+                    background: iconEmoji === emoji ? 'rgba(255, 107, 74, 0.25)' : '#dbeafe',
+                    borderColor: iconEmoji === emoji ? '#ff6b4a' : '#93c5fd',
                     transition: 'all 0.15s ease'
                   }}
                 >
@@ -255,16 +272,16 @@ export default function UploadModal({
 
           {/* Upload Method Content */}
           <div style={{
-            background: 'var(--section-box-bg)',
+            background: 'rgba(219, 234, 254, 0.08)',
             borderRadius: 'var(--radius-lg)',
             padding: '16px',
-            border: '1px solid var(--border-color)',
+            border: '1px solid rgba(147, 197, 253, 0.25)',
             marginBottom: '18px'
           }}>
 
             {/* HTML Code Input */}
             <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', flexWrap: 'wrap', gap: '10px' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', marginBottom: '10px' }}>
                   <button
                     type="button"
                     onClick={handlePasteFromClipboard}
@@ -287,18 +304,17 @@ export default function UploadModal({
                     <ClipboardPaste size={15} />
                     <span>📋 클립보드에서 붙여넣기</span>
                   </button>
-
-                  <label className="form-label" style={{ fontSize: '1.05rem', margin: 0 }}>
-                    HTML/CSS/JavaScript 코드 직접 입력
-                  </label>
                 </div>
                 <textarea
-                  className="form-textarea"
+                  className="form-textarea modal-blue-input"
                   rows={6}
                   placeholder="<!DOCTYPE html><html><body><h1>나의 첫 번째 복지관 앱</h1></body></html>"
                   value={appCode}
                   onChange={(e) => setAppCode(e.target.value)}
-                  style={{ fontFamily: 'monospace', fontSize: '0.92rem' }}
+                  style={{
+                    fontFamily: 'monospace',
+                    fontSize: '0.92rem'
+                  }}
                 />
               </div>
 
@@ -308,7 +324,7 @@ export default function UploadModal({
           <div className="form-group">
             <label className="form-label">앱 소개 및 사용 설명</label>
             <textarea
-              className="form-textarea"
+              className="form-textarea modal-blue-input"
               rows={2}
               placeholder="복지관 어르신들과 함께 사용할 수 있는 기능이나 연습 목표를 적어주세요."
               value={description}

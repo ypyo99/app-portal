@@ -2,7 +2,7 @@
 export const INITIAL_TEACHERS = [
   {
     id: 't-1',
-    name: '김미경 선생님',
+    name: '김미경',
     department: '노인복지과',
     bio: '어르신들의 활기찬 일상과 건강 관리를 돕는 스마트 앱을 만들고 있어요 🌿',
     avatar_url: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&q=80',
@@ -13,7 +13,7 @@ export const INITIAL_TEACHERS = [
   },
   {
     id: 't-2',
-    name: '박지훈 선생님',
+    name: '박지훈',
     department: '사회재활과',
     bio: '재미있고 뇌 건강에 도움되는 두뇌 훈련 게임 및 인지 케어 앱을 개발 중입니다 🧩',
     avatar_url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=256&q=80',
@@ -24,7 +24,7 @@ export const INITIAL_TEACHERS = [
   },
   {
     id: 't-3',
-    name: '이수진 선생님',
+    name: '이수진',
     department: '지역복지과',
     bio: '복지관 프로그램 참여자들을 위한 간편 출석과 스탬프 투어 앱을 연구합니다 ⭐',
     avatar_url: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=256&q=80',
@@ -35,7 +35,7 @@ export const INITIAL_TEACHERS = [
   },
   {
     id: 't-4',
-    name: '정우성 선생님',
+    name: '정우성',
     department: '스마트복지팀',
     bio: '무장애 배리어프리 지도와 복지관 편의시설 스마트 길라잡이를 제작합니다 🗺️',
     avatar_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&q=80',
@@ -46,7 +46,7 @@ export const INITIAL_TEACHERS = [
   },
   {
     id: 't-5',
-    name: '최영희 선생님',
+    name: '최영희',
     department: '평생교육과',
     bio: '선생님들과 어르신들이 매일 마음을 나누는 행복 감사일기와 감정 다이어리입니다 💖',
     avatar_url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&q=80',

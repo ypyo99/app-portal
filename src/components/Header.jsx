@@ -56,7 +56,8 @@ export default function Header({
             alignItems: 'center', 
             gap: '14px', 
             cursor: 'pointer',
-            userSelect: 'none'
+            userSelect: 'none',
+            flexShrink: 0
           }}
         >
           <div style={{
@@ -68,28 +69,27 @@ export default function Header({
             alignItems: 'center',
             justifyContent: 'center',
             fontSize: '1.6rem',
-            boxShadow: '0 4px 18px rgba(255, 107, 74, 0.4)'
+            boxShadow: '0 4px 18px rgba(255, 107, 74, 0.4)',
+            flexShrink: 0
           }}>
             🌟
           </div>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <h1 style={{ 
-                fontSize: '1.25rem', 
+                fontSize: '1.1rem', 
                 fontWeight: '800', 
                 background: 'var(--brand-title-gradient)', 
                 WebkitBackgroundClip: 'text', 
                 WebkitTextFillColor: 'transparent',
-                letterSpacing: '-0.02em'
+                letterSpacing: '-0.02em',
+                whiteSpace: 'nowrap'
               }}>
-                성동복지관
+                성동종합노인복지관
               </h1>
-              <span className="badge badge-coral" style={{ fontSize: '0.72rem', padding: '2px 8px' }}>
+              <span className="badge badge-coral" style={{ fontSize: '0.72rem', padding: '2px 8px', whiteSpace: 'nowrap' }}>
                 앱 쉐어스페이스
               </span>
-            </div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-              EduApp Hub & Cloud Storage Runner
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function Header({
         <div className="header-search-bar" style={{
           flex: '1',
           maxWidth: '450px',
-          minWidth: '220px',
+          minWidth: '200px',
           position: 'relative'
         }}>
           <Search 
@@ -146,14 +146,14 @@ export default function Header({
         </div>
 
         {/* Right: Actions and Status */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'nowrap', flexShrink: 0 }}>
 
           {/* Dark / Light Theme Toggle Button */}
           <button 
             className="btn btn-secondary btn-icon"
             onClick={onToggleTheme}
             title={theme === 'dark' ? "라이트 모드로 전환" : "다크 모드로 전환"}
-            style={{ width: '38px', height: '38px', borderRadius: '12px' }}
+            style={{ width: '38px', height: '38px', borderRadius: '12px', flexShrink: 0 }}
             aria-label="화면 테마 토글 (다크/라이트 모드)"
           >
             {theme === 'dark' ? (
@@ -168,7 +168,7 @@ export default function Header({
             className="btn btn-secondary btn-icon"
             onClick={onOpenSettings}
             title="Supabase & 구글 드라이브 환경설정"
-            style={{ width: '38px', height: '38px', borderRadius: '12px' }}
+            style={{ width: '38px', height: '38px', borderRadius: '12px', flexShrink: 0 }}
           >
             <Settings size={17} />
           </button>

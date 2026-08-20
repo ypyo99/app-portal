@@ -77,7 +77,7 @@ export default function AppGrid({ apps, teachers, onRunApp, onSelectTeacher, onD
           }}>
             <LayoutGrid size={16} />
           </div>
-          <h2 style={{ fontSize: '1.4rem', fontWeight: '800' }}>
+          <h2 style={{ fontSize: '1.2rem', fontWeight: '800' }}>
             전체 공유 앱 갤러리
           </h2>
           <span className="badge badge-blue" style={{ fontSize: '0.8rem' }}>

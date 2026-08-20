@@ -29,7 +29,7 @@ export default function EditAppModal({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Emojis preset
-  const emojiPresets = ['📱', '🧘‍♂️', '🧩', '⭐', '🧭', '💖', '🎨', '🍱', '🏃‍♀️', '🎵', '🌻', '🎁'];
+  const emojiPresets = ['📱', '🧘‍♂️', '🧩', '🧭', '🎨', '🍱', '🏃‍♀️', '🎵', '🌻', '🎁'];
 
   // Categories preset
   const categories = ['건강/운동', '교육/게임', '참여/출석', '복지/지도', '마음/힐링', '기타'];

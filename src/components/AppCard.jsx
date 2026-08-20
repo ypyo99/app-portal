@@ -118,7 +118,7 @@ function DeleteConfirmDialog({ app, teacher, onConfirm, onCancel }) {
                 {app.title}
               </p>
               <p style={{ fontSize: '0.78rem', color: '#f87171' }}>
-                {teacher?.name || '선생님'} 제작
+                {(teacher?.name || '').replace(/선생님$/g, '').trim() || '제작자'} 제작
               </p>
             </div>
           </div>
@@ -351,7 +351,7 @@ export default function AppCard({ app, teacher, teachers, onRunApp, onSelectTeac
           const currentTeacher = teacher || (teachers && teachers.find(t => String(t.id) === String(app.teacher_id)));
           const rawName = currentTeacher ? currentTeacher.name : (app.teacher_name || app.teacherName || '');
           const cleanName = rawName.replace(/선생님$/g, '').trim();
-          const displayTeacherName = cleanName ? `${cleanName} 선생님` : '선생님';
+          const displayTeacherName = cleanName || '제작자';
           const teacherEmoji = currentTeacher ? (currentTeacher.icon_emoji || '👩‍🏫') : '👩‍🏫';
 
           return (

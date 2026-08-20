@@ -93,7 +93,7 @@ export default function TeacherDetail({
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
                 <h1 style={{ fontSize: '1.8rem', fontWeight: '800', color: 'var(--text-main)' }}>
-                  {teacher.name}
+                  {(teacher.name || '').replace(/선생님$/g, '').trim()}
                 </h1>
                 <span className="badge badge-coral" style={{ fontSize: '0.82rem' }}>
                   {teacher.department || '성동복지관'}
@@ -153,7 +153,7 @@ export default function TeacherDetail({
           marginBottom: '20px'
         }}>
           <h2 style={{ fontSize: '1.35rem', fontWeight: '800' }}>
-            📦 {teacher.name}님이 제작한 앱 ({teacherApps.length})
+            📦 {(teacher.name || '').replace(/선생님$/g, '').trim()}님이 제작한 앱 ({teacherApps.length})
           </h2>
         </div>
 

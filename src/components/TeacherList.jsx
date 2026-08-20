@@ -13,9 +13,7 @@ export default function TeacherList({
     return safeGetItem('seongdong_selected_team', 'all');
   });
 
-  const [isCollapsed, setIsCollapsed] = useState(() => {
-    return safeGetItem('seongdong_teacher_grid_collapsed') === 'true';
-  });
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
     setIsCollapsed(prev => {
@@ -84,16 +82,13 @@ export default function TeacherList({
             }}>
               <Users size={16} />
             </div>
-            <h2 style={{ fontSize: '1.4rem', fontWeight: '800' }}>
+            <h2 style={{ fontSize: '1.2rem', fontWeight: '800' }}>
               선생님 목록
             </h2>
             <span className="badge badge-coral" style={{ fontSize: '0.8rem' }}>
               총 {filteredTeachers.length}명
             </span>
           </div>
-          <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginTop: '4px' }}>
-            선생님 카드를 클릭하면 각 선생님이 직접 개발한 스마트 앱 목록을 확인하고 실행할 수 있습니다.
-          </p>
         </div>
 
         {/* Right Controls: Department Filter Tabs & Fold/Unfold Toggle */}
@@ -234,13 +229,13 @@ export default function TeacherList({
 
                     <div>
                       <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: 'var(--text-main)', letterSpacing: '-0.01em' }}>
-                        {teacher.name}
+                        {(teacher.name || '').replace(/선생님$/g, '').trim()}
                       </h3>
                     </div>
                   </div>
 
                   <span className="badge badge-blue" style={{ fontSize: '0.78rem' }}>
-                    📱 {appCount}개 앱
+                    {appCount}
                   </span>
                 </div>
 

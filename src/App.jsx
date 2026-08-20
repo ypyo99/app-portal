@@ -224,9 +224,9 @@ export default function App() {
 
 
               <h1 style={{
-                fontSize: '2.4rem',
+                fontSize: '1.3rem',
                 fontWeight: '800',
-                lineHeight: '1.25',
+                lineHeight: '1.3',
                 marginBottom: '14px',
                 background: 'var(--hero-title-gradient)',
                 WebkitBackgroundClip: 'text',
